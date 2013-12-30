@@ -1,1 +1,0 @@
-../../Barista/Barista/Middleware/Templates/BARTemplateRenderer.h

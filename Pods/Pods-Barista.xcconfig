@@ -1,1 +1,0 @@
-PODS_BARISTA_OTHER_LDFLAGS = -lz -framework Foundation -framework Security
