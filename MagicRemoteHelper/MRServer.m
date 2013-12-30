@@ -65,7 +65,11 @@
         
         BARResponse *response = [[BARResponse alloc] init];
         response.statusCode = 200;
-        response.body = @{@"name": [[NSHost currentHost] localizedName]};
+        
+        NSMutableDictionary *body = [NSMutableDictionary dictionaryWithDictionary:@{@"name": [[NSHost currentHost] localizedName]}];
+        if (ip) body[@"ip"] = ip;
+        
+        response.body = body;
         
         if (ip && _connectionBlock) _connectionBlock(ip);
         

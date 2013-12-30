@@ -8,11 +8,16 @@
 
 #import "AppDelegate.h"
 #import "MRServer.h"
+#import "MRServicesManager.h"
+#import "MRSpotifyService.h"
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    [[MRServicesManager sharedManager] addService:[[MRSpotifyService alloc] init]];
+    
+    
     [[MRServer sharedServer] setAcceptedActions:@[@"playpause",@"next", @"prev"]];
     [[MRServer sharedServer] setConnectionBlock:^(NSString *host){
         
@@ -20,7 +25,9 @@
     }];
     [[MRServer sharedServer] setActionBlock:^(NSString *action){
         
-        NSLog(@"Perform action %@", action);
+        [[MRServicesManager sharedManager] makeAction:action callback:^{
+            
+        }];
     }];
     [[MRServer sharedServer] startServer];
 }
