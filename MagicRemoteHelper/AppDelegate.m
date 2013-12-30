@@ -7,12 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import "MRServer.h"
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    [[MRServer sharedServer] setAcceptedActions:@[@"playpause",@"next", @"prev"]];
+    [[MRServer sharedServer] setConnectionBlock:^(NSString *host){
+        
+        NSLog(@"Host connected %@", host);
+    }];
+    [[MRServer sharedServer] setActionBlock:^(NSString *action){
+        
+        NSLog(@"Perform action %@", action);
+    }];
+    [[MRServer sharedServer] startServer];
 }
 
 @end
