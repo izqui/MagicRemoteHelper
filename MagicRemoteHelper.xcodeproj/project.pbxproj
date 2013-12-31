@@ -22,14 +22,15 @@
 		E1D56B001871A6DD00448F4B /* MRServer.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D56AFF1871A6DD00448F4B /* MRServer.m */; };
 		E1D56B151871F55600448F4B /* MRServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D56B141871F55600448F4B /* MRServicesManager.m */; };
 		E1D56B181871F8CD00448F4B /* MRSpotifyService.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D56B171871F8CD00448F4B /* MRSpotifyService.m */; };
-		E1D56B231872009900448F4B /* spotify-info.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1D56B201872009900448F4B /* spotify-info.applescript */; };
 		E1D56B241872009900448F4B /* spotify-playpause.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1D56B211872009900448F4B /* spotify-playpause.applescript */; };
 		E1D56B251872009900448F4B /* spotify-next.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1D56B221872009900448F4B /* spotify-next.applescript */; };
 		E1D56B27187200B600448F4B /* spotify-prev.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1D56B26187200B600448F4B /* spotify-prev.applescript */; };
-		E1D56B281872016100448F4B /* spotify-info.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1D56B201872009900448F4B /* spotify-info.applescript */; };
 		E1D56B291872016100448F4B /* spotify-playpause.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1D56B211872009900448F4B /* spotify-playpause.applescript */; };
 		E1D56B2A1872016100448F4B /* spotify-next.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1D56B221872009900448F4B /* spotify-next.applescript */; };
 		E1D56B2B1872016100448F4B /* spotify-prev.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1D56B26187200B600448F4B /* spotify-prev.applescript */; };
+		E1D56B2E18721AED00448F4B /* spotify-info.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1D56B2D18721AED00448F4B /* spotify-info.applescript */; };
+		E1D56B2F18721AF700448F4B /* spotify-info.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1D56B2D18721AED00448F4B /* spotify-info.applescript */; };
+		E1D56B3318721BF900448F4B /* MRApplescriptHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D56B3218721BF900448F4B /* MRApplescriptHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,10 +71,12 @@
 		E1D56B141871F55600448F4B /* MRServicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRServicesManager.m; sourceTree = "<group>"; };
 		E1D56B161871F8CD00448F4B /* MRSpotifyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRSpotifyService.h; sourceTree = "<group>"; };
 		E1D56B171871F8CD00448F4B /* MRSpotifyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRSpotifyService.m; sourceTree = "<group>"; };
-		E1D56B201872009900448F4B /* spotify-info.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "spotify-info.applescript"; sourceTree = "<group>"; };
 		E1D56B211872009900448F4B /* spotify-playpause.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "spotify-playpause.applescript"; sourceTree = "<group>"; };
 		E1D56B221872009900448F4B /* spotify-next.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "spotify-next.applescript"; sourceTree = "<group>"; };
 		E1D56B26187200B600448F4B /* spotify-prev.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "spotify-prev.applescript"; sourceTree = "<group>"; };
+		E1D56B2D18721AED00448F4B /* spotify-info.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "spotify-info.applescript"; sourceTree = "<group>"; };
+		E1D56B3118721BF900448F4B /* MRApplescriptHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRApplescriptHelper.h; sourceTree = "<group>"; };
+		E1D56B3218721BF900448F4B /* MRApplescriptHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRApplescriptHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,7 @@
 				E1D56AFE1871A6DD00448F4B /* MRServer.h */,
 				E1D56AFF1871A6DD00448F4B /* MRServer.m */,
 				E1D56B1E1871FA6A00448F4B /* Services */,
+				E1D56B3018721BE600448F4B /* Helpers */,
 				E1D56ADF18717AC300448F4B /* MainMenu.xib */,
 				E1D56AE218717AC300448F4B /* Images.xcassets */,
 				E1D56AD118717AC300448F4B /* Supporting Files */,
@@ -207,12 +211,21 @@
 		E1D56B2C1872024200448F4B /* scripts */ = {
 			isa = PBXGroup;
 			children = (
-				E1D56B201872009900448F4B /* spotify-info.applescript */,
 				E1D56B211872009900448F4B /* spotify-playpause.applescript */,
 				E1D56B221872009900448F4B /* spotify-next.applescript */,
 				E1D56B26187200B600448F4B /* spotify-prev.applescript */,
+				E1D56B2D18721AED00448F4B /* spotify-info.applescript */,
 			);
 			name = scripts;
+			sourceTree = "<group>";
+		};
+		E1D56B3018721BE600448F4B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E1D56B3118721BF900448F4B /* MRApplescriptHelper.h */,
+				E1D56B3218721BF900448F4B /* MRApplescriptHelper.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1D56B281872016100448F4B /* spotify-info.applescript in Resources */,
+				E1D56B2F18721AF700448F4B /* spotify-info.applescript in Resources */,
 				E1D56B291872016100448F4B /* spotify-playpause.applescript in Resources */,
 				E1D56B2A1872016100448F4B /* spotify-next.applescript in Resources */,
 				E1D56B2B1872016100448F4B /* spotify-prev.applescript in Resources */,
@@ -352,13 +365,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1D56B231872009900448F4B /* spotify-info.applescript in Sources */,
+				E1D56B3318721BF900448F4B /* MRApplescriptHelper.m in Sources */,
 				E1D56ADE18717AC300448F4B /* AppDelegate.m in Sources */,
 				E1D56B241872009900448F4B /* spotify-playpause.applescript in Sources */,
 				E1D56B001871A6DD00448F4B /* MRServer.m in Sources */,
 				E1D56B151871F55600448F4B /* MRServicesManager.m in Sources */,
 				E1D56AD718717AC300448F4B /* main.m in Sources */,
 				E1D56B181871F8CD00448F4B /* MRSpotifyService.m in Sources */,
+				E1D56B2E18721AED00448F4B /* spotify-info.applescript in Sources */,
 				E1D56B251872009900448F4B /* spotify-next.applescript in Sources */,
 				E1D56B27187200B600448F4B /* spotify-prev.applescript in Sources */,
 			);

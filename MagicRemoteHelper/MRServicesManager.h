@@ -11,12 +11,9 @@
 @protocol MRService <NSObject>
 -(NSString *)serviceName;
 //-(NSImage *)serviceImage;
-
-@optional
 -(void)performAction:(NSString *)action callback:(void (^)())callback;
 -(void)requestInfoWithCallback:(void (^)(NSDictionary *info))callback;
 @end
-
 
 @interface MRServicesManager : NSObject
 {
@@ -28,6 +25,8 @@
 - (void)addService:(id<MRService>)service;
 
 -(void) makeAction:(NSString *)action callback:(void (^)())callback;
+-(void) infoRequestWithCallback:(void (^)(NSDictionary *dict))callback;
+
 @property (nonatomic) NSInteger selectedServiceIndex;
 @end
 

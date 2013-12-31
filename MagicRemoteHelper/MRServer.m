@@ -7,7 +7,7 @@
 //
 
 #import "MRServer.h"
-
+#import "MRServicesManager.h"
 
 @implementation MRServer
 
@@ -96,6 +96,19 @@
         }
         
         [connection sendResponse:response];
+        return YES;
+    }];
+    [router addRoute:@"/get" forHTTPMethod:@"GET" handler:^BOOL(BARConnection *connection, BARRequest *request, NSDictionary *parameters) {
+        
+        [[MRServicesManager sharedManager] infoRequestWithCallback:^(NSDictionary *dict) {
+            
+            BARResponse *response = [[BARResponse alloc] init];
+            response.statusCode = 200;
+            response.body = dict;
+            
+            [connection sendResponse:response];
+        }];
+        
         return YES;
     }];
     

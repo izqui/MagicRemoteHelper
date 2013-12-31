@@ -27,5 +27,6 @@ typedef void (^ActionBlock)(NSString *action);
 @property (nonatomic, copy) ConnectionBlock connectionBlock;
 @property (nonatomic, copy) ActionBlock actionBlock;
 @property (nonatomic, strong) NSArray *acceptedActions;
+@property (nonatomic, strong) NSString *clientHost;
 
 @end

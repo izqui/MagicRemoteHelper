@@ -16,20 +16,31 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     [[MRServicesManager sharedManager] addService:[[MRSpotifyService alloc] init]];
-    
+   
     
     [[MRServer sharedServer] setAcceptedActions:@[@"playpause",@"next", @"prev"]];
     [[MRServer sharedServer] setConnectionBlock:^(NSString *host){
         
-        NSLog(@"Host connected %@", host);
+        //host = @"http://localhost:3004";
+        
+        [[MRServer sharedServer] setClientHost:host];
+        
+        [self sendCurrentInfo];
+        
     }];
     [[MRServer sharedServer] setActionBlock:^(NSString *action){
         
         [[MRServicesManager sharedManager] makeAction:action callback:^{
-            
+            [self sendCurrentInfo];
         }];
     }];
     [[MRServer sharedServer] startServer];
 }
 
+-(void)sendCurrentInfo{
+    
+    [[MRServicesManager sharedManager] infoRequestWithCallback:^(NSDictionary *info) {
+       
+    }];
+}
 @end

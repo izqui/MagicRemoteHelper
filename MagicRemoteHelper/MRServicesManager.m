@@ -64,4 +64,15 @@
         NSLog(@"No services bro");
     }
 }
+-(void) infoRequestWithCallback:(void (^)(NSDictionary *dict))callback{
+    
+    if (selectedService && [selectedService respondsToSelector:@selector(performAction:callback:)]){
+        
+        [selectedService requestInfoWithCallback:callback];
+    }
+    else {
+        
+        NSLog(@"No services bro");
+    }
+}
 @end

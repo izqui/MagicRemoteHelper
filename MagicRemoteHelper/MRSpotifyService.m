@@ -7,6 +7,7 @@
 //
 
 #import "MRSpotifyService.h"
+#import "MRApplescriptHelper.h"
 
 @implementation MRSpotifyService
 -(NSString *)serviceName{
@@ -16,12 +17,16 @@
 -(void)performAction:(NSString *)action callback:(void (^)())callback{
     
     NSString *name = [NSString stringWithFormat:@"spotify-%@", action];
-    NSBundle *bundle = [NSBundle mainBundle];
-    NSString *str = [bundle pathForResource:name ofType:@"applescript"];
-    NSLog(@"path %@", str);
-    NSURL *url = [[NSURL alloc] initFileURLWithPath:str];
-    NSAppleScript *script = [[NSAppleScript alloc] initWithContentsOfURL:url error:nil];
-    NSAppleEventDescriptor *event = [script executeAndReturnError:nil];
+    [MRApplescriptHelper executeApplescriptWithName:name];
     if (callback) callback();
+}
+-(void)requestInfoWithCallback:(void (^)(NSDictionary *))callback{
+    
+    NSString *res = [MRApplescriptHelper executeApplescriptWithName:@"spotify-info"];
+    if (res){
+        
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[res dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
+        if (dict && callback) callback(dict);
+    }
 }
 @end
