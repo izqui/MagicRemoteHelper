@@ -66,13 +66,24 @@
 }
 -(void) infoRequestWithCallback:(void (^)(NSDictionary *dict))callback{
     
-    if (selectedService && [selectedService respondsToSelector:@selector(performAction:callback:)]){
+    if (selectedService && [selectedService respondsToSelector:@selector(requestInfoWithCallback:)]){
         
         [selectedService requestInfoWithCallback:callback];
     }
     else {
         
         NSLog(@"No services bro");
+    }
+}
+-(void) getImageWithCallback:(void (^)(NSData *data))callback{
+    
+    if (selectedService && [selectedService respondsToSelector:@selector(requestMediaCurrentImage:)]){
+        
+        [selectedService requestMediaCurrentImage:callback];
+    }
+    else {
+        
+        callback(nil);
     }
 }
 @end

@@ -29,4 +29,15 @@
         if (dict && callback) callback(dict);
     }
 }
+-(void)requestMediaCurrentImage:(void (^)(NSData *data))callback{
+    
+    NSString *res = [MRApplescriptHelper executeApplescriptWithName:@"spotify-image"];
+    if (res){
+        
+        NSData *d = [[NSFileManager defaultManager] contentsAtPath:res];
+        
+        if (d && callback) callback(d);
+        
+    }
+}
 @end

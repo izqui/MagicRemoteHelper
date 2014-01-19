@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0ACFD2A9BEF8434B9A9DC105 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E4A7F6FFD3498A87C7D674 /* libPods.a */; };
+		E1228E86188C4B88008ACDEC /* spotify-image.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1228E85188C4B88008ACDEC /* spotify-image.applescript */; };
+		E1228E87188C4B9B008ACDEC /* spotify-image.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228E85188C4B88008ACDEC /* spotify-image.applescript */; };
 		E1D56ACB18717AC300448F4B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D56ACA18717AC300448F4B /* Cocoa.framework */; };
 		E1D56AD518717AC300448F4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1D56AD318717AC300448F4B /* InfoPlist.strings */; };
 		E1D56AD718717AC300448F4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D56AD618717AC300448F4B /* main.m */; };
@@ -46,6 +48,7 @@
 /* Begin PBXFileReference section */
 		14500D84B910452080153E9F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		B5E4A7F6FFD3498A87C7D674 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1228E85188C4B88008ACDEC /* spotify-image.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "spotify-image.applescript"; sourceTree = "<group>"; };
 		E1D56AC718717AC300448F4B /* MagicRemoteHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicRemoteHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D56ACA18717AC300448F4B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E1D56ACD18717AC300448F4B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -215,6 +218,7 @@
 				E1D56B221872009900448F4B /* spotify-next.applescript */,
 				E1D56B26187200B600448F4B /* spotify-prev.applescript */,
 				E1D56B2D18721AED00448F4B /* spotify-info.applescript */,
+				E1228E85188C4B88008ACDEC /* spotify-image.applescript */,
 			);
 			name = scripts;
 			sourceTree = "<group>";
@@ -312,6 +316,7 @@
 				E1D56B2B1872016100448F4B /* spotify-prev.applescript in Resources */,
 				E1D56AD518717AC300448F4B /* InfoPlist.strings in Resources */,
 				E1D56AE318717AC300448F4B /* Images.xcassets in Resources */,
+				E1228E87188C4B9B008ACDEC /* spotify-image.applescript in Resources */,
 				E1D56ADB18717AC300448F4B /* Credits.rtf in Resources */,
 				E1D56AE118717AC300448F4B /* MainMenu.xib in Resources */,
 			);
@@ -366,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D56B3318721BF900448F4B /* MRApplescriptHelper.m in Sources */,
+				E1228E86188C4B88008ACDEC /* spotify-image.applescript in Sources */,
 				E1D56ADE18717AC300448F4B /* AppDelegate.m in Sources */,
 				E1D56B241872009900448F4B /* spotify-playpause.applescript in Sources */,
 				E1D56B001871A6DD00448F4B /* MRServer.m in Sources */,

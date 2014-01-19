@@ -107,8 +107,30 @@
             response.body = dict;
             
             [connection sendResponse:response];
+            
         }];
         
+        return YES;
+    }];
+    [router addRoute:@"/image" forHTTPMethod:@"GET" handler:^BOOL(BARConnection *connection, BARRequest *request, NSDictionary *parameters) {
+        
+        [[MRServicesManager sharedManager] getImageWithCallback:^(NSData *data) {
+            
+            if (data){
+                BARResponse *res = [[BARResponse alloc] init];
+                res.statusCode = 200;
+                [res setHeaders:@{@"Content-type":@"image/png"}];
+                res.responseData = data;
+                [connection sendResponse:res];
+            }
+            else {
+                
+                BARResponse *res = [[BARResponse alloc] init];
+                res.statusCode = 404;
+                [connection sendResponse:res];
+            }
+            
+        }];
         return YES;
     }];
     

@@ -13,6 +13,8 @@
 //-(NSImage *)serviceImage;
 -(void)performAction:(NSString *)action callback:(void (^)())callback;
 -(void)requestInfoWithCallback:(void (^)(NSDictionary *info))callback;
+@optional
+-(void)requestMediaCurrentImage:(void (^)(NSData *data))callback;
 @end
 
 @interface MRServicesManager : NSObject
@@ -26,7 +28,7 @@
 
 -(void) makeAction:(NSString *)action callback:(void (^)())callback;
 -(void) infoRequestWithCallback:(void (^)(NSDictionary *dict))callback;
-
+-(void) getImageWithCallback:(void (^)(NSData *data))callback;
 @property (nonatomic) NSInteger selectedServiceIndex;
 @end
 
