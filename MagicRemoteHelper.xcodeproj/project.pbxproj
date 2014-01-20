@@ -10,6 +10,24 @@
 		0ACFD2A9BEF8434B9A9DC105 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E4A7F6FFD3498A87C7D674 /* libPods.a */; };
 		E1228E86188C4B88008ACDEC /* spotify-image.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1228E85188C4B88008ACDEC /* spotify-image.applescript */; };
 		E1228E87188C4B9B008ACDEC /* spotify-image.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228E85188C4B88008ACDEC /* spotify-image.applescript */; };
+		E1228E8E188D81A9008ACDEC /* MRKeyboardService.m in Sources */ = {isa = PBXBuildFile; fileRef = E1228E8D188D81A9008ACDEC /* MRKeyboardService.m */; };
+		E1228E91188D8390008ACDEC /* keyboard-next.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1228E90188D8390008ACDEC /* keyboard-next.applescript */; };
+		E1228E93188D839D008ACDEC /* keyboard-prev.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1228E92188D839D008ACDEC /* keyboard-prev.applescript */; };
+		E1228E95188D83AF008ACDEC /* keyboard-playpause.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1228E94188D83AF008ACDEC /* keyboard-playpause.applescript */; };
+		E1228E96188D83BC008ACDEC /* keyboard-next.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228E90188D8390008ACDEC /* keyboard-next.applescript */; };
+		E1228E97188D83BE008ACDEC /* keyboard-prev.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228E92188D839D008ACDEC /* keyboard-prev.applescript */; };
+		E1228E98188D83C0008ACDEC /* keyboard-playpause.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228E94188D83AF008ACDEC /* keyboard-playpause.applescript */; };
+		E1228E9A188D8592008ACDEC /* keyboard-info.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1228E99188D8592008ACDEC /* keyboard-info.applescript */; };
+		E1228E9C188D8714008ACDEC /* keyboard-info.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228E99188D8592008ACDEC /* keyboard-info.applescript */; };
+		E1228EA2188DA246008ACDEC /* MRVLCService.m in Sources */ = {isa = PBXBuildFile; fileRef = E1228EA1188DA246008ACDEC /* MRVLCService.m */; };
+		E1228EA5188DA437008ACDEC /* vlc-info.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1228EA4188DA437008ACDEC /* vlc-info.applescript */; };
+		E1228EA7188DA442008ACDEC /* vlc-playpause.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1228EA6188DA442008ACDEC /* vlc-playpause.applescript */; };
+		E1228EA9188DA44F008ACDEC /* vlc-next.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1228EA8188DA44F008ACDEC /* vlc-next.applescript */; };
+		E1228EAB188DA45D008ACDEC /* vlc-prev.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1228EAA188DA45D008ACDEC /* vlc-prev.applescript */; };
+		E1228EAC188DA4B5008ACDEC /* vlc-prev.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228EAA188DA45D008ACDEC /* vlc-prev.applescript */; };
+		E1228EAD188DA4B6008ACDEC /* vlc-next.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228EA8188DA44F008ACDEC /* vlc-next.applescript */; };
+		E1228EAE188DA4B7008ACDEC /* vlc-playpause.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228EA6188DA442008ACDEC /* vlc-playpause.applescript */; };
+		E1228EAF188DA4B9008ACDEC /* vlc-info.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228EA4188DA437008ACDEC /* vlc-info.applescript */; };
 		E1D56ACB18717AC300448F4B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D56ACA18717AC300448F4B /* Cocoa.framework */; };
 		E1D56AD518717AC300448F4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1D56AD318717AC300448F4B /* InfoPlist.strings */; };
 		E1D56AD718717AC300448F4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D56AD618717AC300448F4B /* main.m */; };
@@ -49,6 +67,18 @@
 		14500D84B910452080153E9F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		B5E4A7F6FFD3498A87C7D674 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1228E85188C4B88008ACDEC /* spotify-image.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "spotify-image.applescript"; sourceTree = "<group>"; };
+		E1228E8C188D81A9008ACDEC /* MRKeyboardService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRKeyboardService.h; sourceTree = "<group>"; };
+		E1228E8D188D81A9008ACDEC /* MRKeyboardService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRKeyboardService.m; sourceTree = "<group>"; };
+		E1228E90188D8390008ACDEC /* keyboard-next.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "keyboard-next.applescript"; sourceTree = "<group>"; };
+		E1228E92188D839D008ACDEC /* keyboard-prev.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "keyboard-prev.applescript"; sourceTree = "<group>"; };
+		E1228E94188D83AF008ACDEC /* keyboard-playpause.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "keyboard-playpause.applescript"; sourceTree = "<group>"; };
+		E1228E99188D8592008ACDEC /* keyboard-info.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "keyboard-info.applescript"; sourceTree = "<group>"; };
+		E1228EA0188DA246008ACDEC /* MRVLCService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRVLCService.h; sourceTree = "<group>"; };
+		E1228EA1188DA246008ACDEC /* MRVLCService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRVLCService.m; sourceTree = "<group>"; };
+		E1228EA4188DA437008ACDEC /* vlc-info.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "vlc-info.applescript"; sourceTree = "<group>"; };
+		E1228EA6188DA442008ACDEC /* vlc-playpause.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "vlc-playpause.applescript"; sourceTree = "<group>"; };
+		E1228EA8188DA44F008ACDEC /* vlc-next.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "vlc-next.applescript"; sourceTree = "<group>"; };
+		E1228EAA188DA45D008ACDEC /* vlc-prev.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "vlc-prev.applescript"; sourceTree = "<group>"; };
 		E1D56AC718717AC300448F4B /* MagicRemoteHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicRemoteHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D56ACA18717AC300448F4B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E1D56ACD18717AC300448F4B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -104,6 +134,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1228E8B188D819B008ACDEC /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E1228E8C188D81A9008ACDEC /* MRKeyboardService.h */,
+				E1228E8D188D81A9008ACDEC /* MRKeyboardService.m */,
+				E1228E8F188D8372008ACDEC /* scripts */,
+			);
+			name = Keyboard;
+			sourceTree = "<group>";
+		};
+		E1228E8F188D8372008ACDEC /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				E1228E90188D8390008ACDEC /* keyboard-next.applescript */,
+				E1228E92188D839D008ACDEC /* keyboard-prev.applescript */,
+				E1228E94188D83AF008ACDEC /* keyboard-playpause.applescript */,
+				E1228E99188D8592008ACDEC /* keyboard-info.applescript */,
+			);
+			name = scripts;
+			sourceTree = "<group>";
+		};
+		E1228E9D188DA1E2008ACDEC /* VLC */ = {
+			isa = PBXGroup;
+			children = (
+				E1228EA0188DA246008ACDEC /* MRVLCService.h */,
+				E1228EA1188DA246008ACDEC /* MRVLCService.m */,
+				E1228EA3188DA428008ACDEC /* scripts */,
+			);
+			name = VLC;
+			sourceTree = "<group>";
+		};
+		E1228EA3188DA428008ACDEC /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				E1228EA4188DA437008ACDEC /* vlc-info.applescript */,
+				E1228EA6188DA442008ACDEC /* vlc-playpause.applescript */,
+				E1228EA8188DA44F008ACDEC /* vlc-next.applescript */,
+				E1228EAA188DA45D008ACDEC /* vlc-prev.applescript */,
+			);
+			name = scripts;
+			sourceTree = "<group>";
+		};
 		E1D56ABE18717AC300448F4B = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +269,8 @@
 				E1D56B131871F55600448F4B /* MRServicesManager.h */,
 				E1D56B141871F55600448F4B /* MRServicesManager.m */,
 				E1D56B1F1871FA7300448F4B /* Spotify */,
+				E1228E8B188D819B008ACDEC /* Keyboard */,
+				E1228E9D188DA1E2008ACDEC /* VLC */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -316,8 +390,16 @@
 				E1D56B2B1872016100448F4B /* spotify-prev.applescript in Resources */,
 				E1D56AD518717AC300448F4B /* InfoPlist.strings in Resources */,
 				E1D56AE318717AC300448F4B /* Images.xcassets in Resources */,
+				E1228EAF188DA4B9008ACDEC /* vlc-info.applescript in Resources */,
 				E1228E87188C4B9B008ACDEC /* spotify-image.applescript in Resources */,
+				E1228EAE188DA4B7008ACDEC /* vlc-playpause.applescript in Resources */,
 				E1D56ADB18717AC300448F4B /* Credits.rtf in Resources */,
+				E1228EAD188DA4B6008ACDEC /* vlc-next.applescript in Resources */,
+				E1228EAC188DA4B5008ACDEC /* vlc-prev.applescript in Resources */,
+				E1228E9C188D8714008ACDEC /* keyboard-info.applescript in Resources */,
+				E1228E96188D83BC008ACDEC /* keyboard-next.applescript in Resources */,
+				E1228E97188D83BE008ACDEC /* keyboard-prev.applescript in Resources */,
+				E1228E98188D83C0008ACDEC /* keyboard-playpause.applescript in Resources */,
 				E1D56AE118717AC300448F4B /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,14 +453,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D56B3318721BF900448F4B /* MRApplescriptHelper.m in Sources */,
+				E1228EA5188DA437008ACDEC /* vlc-info.applescript in Sources */,
+				E1228E91188D8390008ACDEC /* keyboard-next.applescript in Sources */,
+				E1228EAB188DA45D008ACDEC /* vlc-prev.applescript in Sources */,
 				E1228E86188C4B88008ACDEC /* spotify-image.applescript in Sources */,
 				E1D56ADE18717AC300448F4B /* AppDelegate.m in Sources */,
 				E1D56B241872009900448F4B /* spotify-playpause.applescript in Sources */,
+				E1228EA9188DA44F008ACDEC /* vlc-next.applescript in Sources */,
 				E1D56B001871A6DD00448F4B /* MRServer.m in Sources */,
 				E1D56B151871F55600448F4B /* MRServicesManager.m in Sources */,
+				E1228E95188D83AF008ACDEC /* keyboard-playpause.applescript in Sources */,
+				E1228EA2188DA246008ACDEC /* MRVLCService.m in Sources */,
+				E1228E9A188D8592008ACDEC /* keyboard-info.applescript in Sources */,
 				E1D56AD718717AC300448F4B /* main.m in Sources */,
+				E1228E8E188D81A9008ACDEC /* MRKeyboardService.m in Sources */,
+				E1228E93188D839D008ACDEC /* keyboard-prev.applescript in Sources */,
 				E1D56B181871F8CD00448F4B /* MRSpotifyService.m in Sources */,
 				E1D56B2E18721AED00448F4B /* spotify-info.applescript in Sources */,
+				E1228EA7188DA442008ACDEC /* vlc-playpause.applescript in Sources */,
 				E1D56B251872009900448F4B /* spotify-next.applescript in Sources */,
 				E1D56B27187200B600448F4B /* spotify-prev.applescript in Sources */,
 			);

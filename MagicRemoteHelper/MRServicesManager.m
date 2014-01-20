@@ -33,7 +33,7 @@
 
 - (void)setSelectedServiceIndex:(NSInteger)selectedServiceIndex{
     
-    if (services.count < selectedServiceIndex){
+    if (services.count > selectedServiceIndex){
         
         _selectedServiceIndex = selectedServiceIndex;
         selectedService = services[selectedServiceIndex];

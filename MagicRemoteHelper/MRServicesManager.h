@@ -17,6 +17,7 @@
 -(void)requestMediaCurrentImage:(void (^)(NSData *data))callback;
 @end
 
+
 @interface MRServicesManager : NSObject
 {
     

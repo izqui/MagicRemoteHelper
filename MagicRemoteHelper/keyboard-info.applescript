@@ -1,0 +1,1 @@
+set name_ to name of (info for (path to frontmost application))
