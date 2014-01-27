@@ -53,6 +53,13 @@
     }
 }
 
+- (NSArray *)getServices{
+    
+    //TODO: Return only installed services
+    return services;
+}
+
+//CONVENIENCE METHODS
 -(void) makeAction:(NSString *)action callback:(void (^)())callback{
     
     if (selectedService && [selectedService respondsToSelector:@selector(performAction:callback:)]){

@@ -7,9 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MRMenu.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
-
-@property (assign) IBOutlet NSWindow *window;
+{
+    NSStatusItem *statusItem;
+    MRMenu *menu;
+    
+}
 
 @end

@@ -28,6 +28,10 @@
 		E1228EAD188DA4B6008ACDEC /* vlc-next.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228EA8188DA44F008ACDEC /* vlc-next.applescript */; };
 		E1228EAE188DA4B7008ACDEC /* vlc-playpause.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228EA6188DA442008ACDEC /* vlc-playpause.applescript */; };
 		E1228EAF188DA4B9008ACDEC /* vlc-info.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228EA4188DA437008ACDEC /* vlc-info.applescript */; };
+		E1A7851D1896E03B00F04168 /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A7851C1896E03B00F04168 /* PFMoveApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1A785211896E08400F04168 /* NSString+SymlinksAndAliases.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A785201896E08400F04168 /* NSString+SymlinksAndAliases.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1A785241896E0A900F04168 /* MRMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A785231896E0A900F04168 /* MRMenu.m */; };
+		E1A7852A1896E9AD00F04168 /* MRStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A785291896E9AD00F04168 /* MRStatusView.m */; };
 		E1D56ACB18717AC300448F4B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D56ACA18717AC300448F4B /* Cocoa.framework */; };
 		E1D56AD518717AC300448F4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1D56AD318717AC300448F4B /* InfoPlist.strings */; };
 		E1D56AD718717AC300448F4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D56AD618717AC300448F4B /* main.m */; };
@@ -79,6 +83,14 @@
 		E1228EA6188DA442008ACDEC /* vlc-playpause.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "vlc-playpause.applescript"; sourceTree = "<group>"; };
 		E1228EA8188DA44F008ACDEC /* vlc-next.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "vlc-next.applescript"; sourceTree = "<group>"; };
 		E1228EAA188DA45D008ACDEC /* vlc-prev.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "vlc-prev.applescript"; sourceTree = "<group>"; };
+		E1A7851B1896E03B00F04168 /* PFMoveApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFMoveApplication.h; sourceTree = "<group>"; };
+		E1A7851C1896E03B00F04168 /* PFMoveApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFMoveApplication.m; sourceTree = "<group>"; };
+		E1A7851F1896E08400F04168 /* NSString+SymlinksAndAliases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SymlinksAndAliases.h"; sourceTree = "<group>"; };
+		E1A785201896E08400F04168 /* NSString+SymlinksAndAliases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SymlinksAndAliases.m"; sourceTree = "<group>"; };
+		E1A785221896E0A900F04168 /* MRMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRMenu.h; sourceTree = "<group>"; };
+		E1A785231896E0A900F04168 /* MRMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRMenu.m; sourceTree = "<group>"; };
+		E1A785281896E9AD00F04168 /* MRStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRStatusView.h; sourceTree = "<group>"; };
+		E1A785291896E9AD00F04168 /* MRStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRStatusView.m; sourceTree = "<group>"; };
 		E1D56AC718717AC300448F4B /* MagicRemoteHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicRemoteHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D56ACA18717AC300448F4B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E1D56ACD18717AC300448F4B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -222,6 +234,10 @@
 			children = (
 				E1D56ADC18717AC300448F4B /* AppDelegate.h */,
 				E1D56ADD18717AC300448F4B /* AppDelegate.m */,
+				E1A785221896E0A900F04168 /* MRMenu.h */,
+				E1A785231896E0A900F04168 /* MRMenu.m */,
+				E1A785281896E9AD00F04168 /* MRStatusView.h */,
+				E1A785291896E9AD00F04168 /* MRStatusView.m */,
 				E1D56AFE1871A6DD00448F4B /* MRServer.h */,
 				E1D56AFF1871A6DD00448F4B /* MRServer.m */,
 				E1D56B1E1871FA6A00448F4B /* Services */,
@@ -302,6 +318,10 @@
 			children = (
 				E1D56B3118721BF900448F4B /* MRApplescriptHelper.h */,
 				E1D56B3218721BF900448F4B /* MRApplescriptHelper.m */,
+				E1A7851B1896E03B00F04168 /* PFMoveApplication.h */,
+				E1A7851C1896E03B00F04168 /* PFMoveApplication.m */,
+				E1A7851F1896E08400F04168 /* NSString+SymlinksAndAliases.h */,
+				E1A785201896E08400F04168 /* NSString+SymlinksAndAliases.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -459,14 +479,18 @@
 				E1228E86188C4B88008ACDEC /* spotify-image.applescript in Sources */,
 				E1D56ADE18717AC300448F4B /* AppDelegate.m in Sources */,
 				E1D56B241872009900448F4B /* spotify-playpause.applescript in Sources */,
+				E1A785241896E0A900F04168 /* MRMenu.m in Sources */,
 				E1228EA9188DA44F008ACDEC /* vlc-next.applescript in Sources */,
 				E1D56B001871A6DD00448F4B /* MRServer.m in Sources */,
+				E1A785211896E08400F04168 /* NSString+SymlinksAndAliases.m in Sources */,
 				E1D56B151871F55600448F4B /* MRServicesManager.m in Sources */,
 				E1228E95188D83AF008ACDEC /* keyboard-playpause.applescript in Sources */,
 				E1228EA2188DA246008ACDEC /* MRVLCService.m in Sources */,
 				E1228E9A188D8592008ACDEC /* keyboard-info.applescript in Sources */,
 				E1D56AD718717AC300448F4B /* main.m in Sources */,
+				E1A7852A1896E9AD00F04168 /* MRStatusView.m in Sources */,
 				E1228E8E188D81A9008ACDEC /* MRKeyboardService.m in Sources */,
+				E1A7851D1896E03B00F04168 /* PFMoveApplication.m in Sources */,
 				E1228E93188D839D008ACDEC /* keyboard-prev.applescript in Sources */,
 				E1D56B181871F8CD00448F4B /* MRSpotifyService.m in Sources */,
 				E1D56B2E18721AED00448F4B /* spotify-info.applescript in Sources */,

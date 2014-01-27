@@ -134,6 +134,43 @@
         return YES;
     }];
     
+    //Service selection
+    [router addRoute:@"/services" forHTTPMethod:@"GET" handler:^BOOL(BARConnection *connection, BARRequest *request, NSDictionary *parameters) {
+        
+        BARResponse *res = [[BARResponse alloc] init];
+        
+        NSMutableArray *retArr = [NSMutableArray array];
+        NSArray *ss = [[MRServicesManager sharedManager] getServices];
+        
+        for (int i = 0; i<ss.count; i++){
+            
+            NSObject<MRService> *s = ss[i];
+        
+            [retArr addObject:@{@"name":s.serviceName, @"id":[NSNumber numberWithInt:i], @"selected":[NSNumber numberWithBool:([[MRServicesManager sharedManager] selectedServiceIndex] == i)]}];
+        }
+        res.statusCode = 200;
+        res.body = @{@"services":retArr};
+        [connection sendResponse:res];
+        
+        return YES;
+    }];
+    
+    [router addRoute:@"/service/:service" forHTTPMethod:@"GET" handler:^BOOL(BARConnection *connection, BARRequest *request, NSDictionary *parameters) {
+        
+        NSInteger service = [parameters[@"service"] integerValue];
+        
+        [[MRServicesManager sharedManager] setSelectedServiceIndex:service];
+        
+        BARResponse *response = [[BARResponse alloc] init];
+        response.statusCode = 200;
+        response.body = @{@"status": @"ok"};
+        
+        
+        [connection sendResponse:response];
+        return YES;
+    }];
+
+    
     return srv;
 }
 

@@ -26,10 +26,13 @@
 }
 + (id)sharedManager;
 - (void)addService:(id<MRService>)service;
+- (NSArray *)getServices;
+
 
 -(void) makeAction:(NSString *)action callback:(void (^)())callback;
 -(void) infoRequestWithCallback:(void (^)(NSDictionary *dict))callback;
 -(void) getImageWithCallback:(void (^)(NSData *data))callback;
+
 @property (nonatomic) NSInteger selectedServiceIndex;
 @end
 
