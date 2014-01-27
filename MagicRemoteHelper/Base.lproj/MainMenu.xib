@@ -648,5 +648,6 @@
         </menu>
         <customObject id="494" customClass="AppDelegate"/>
         <customObject id="420" customClass="NSFontManager"/>
+        <customObject id="iFu-UV-Z1b" customClass="SUUpdater"/>
     </objects>
 </document>

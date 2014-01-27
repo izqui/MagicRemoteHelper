@@ -56,6 +56,9 @@
 		E1D56B2E18721AED00448F4B /* spotify-info.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1D56B2D18721AED00448F4B /* spotify-info.applescript */; };
 		E1D56B2F18721AF700448F4B /* spotify-info.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1D56B2D18721AED00448F4B /* spotify-info.applescript */; };
 		E1D56B3318721BF900448F4B /* MRApplescriptHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D56B3218721BF900448F4B /* MRApplescriptHelper.m */; };
+		E1E68D6718970E4D00245AC0 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E68D6618970E4D00245AC0 /* Sparkle.framework */; };
+		E1E68D6918970E9B00245AC0 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E1E68D6618970E4D00245AC0 /* Sparkle.framework */; };
+		E1E68D6B1897126500245AC0 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = E1E68D6A1897126500245AC0 /* dsa_pub.pem */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,19 @@
 			remoteInfo = MagicRemoteHelper;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E1E68D6818970E8F00245AC0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E1E68D6918970E9B00245AC0 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		14500D84B910452080153E9F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -88,10 +104,10 @@
 		E1A7851C1896E03B00F04168 /* PFMoveApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFMoveApplication.m; sourceTree = "<group>"; };
 		E1A7851F1896E08400F04168 /* NSString+SymlinksAndAliases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SymlinksAndAliases.h"; sourceTree = "<group>"; };
 		E1A785201896E08400F04168 /* NSString+SymlinksAndAliases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SymlinksAndAliases.m"; sourceTree = "<group>"; };
-		E1A785221896E0A900F04168 /* MRMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRMenu.h; sourceTree = "<group>"; };
-		E1A785231896E0A900F04168 /* MRMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRMenu.m; sourceTree = "<group>"; };
-		E1A785281896E9AD00F04168 /* MRStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRStatusView.h; sourceTree = "<group>"; };
-		E1A785291896E9AD00F04168 /* MRStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRStatusView.m; sourceTree = "<group>"; };
+		E1A785221896E0A900F04168 /* MRMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRMenu.h; path = MagicRemoteHelper/MRMenu.h; sourceTree = "<group>"; };
+		E1A785231896E0A900F04168 /* MRMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRMenu.m; path = MagicRemoteHelper/MRMenu.m; sourceTree = "<group>"; };
+		E1A785281896E9AD00F04168 /* MRStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRStatusView.h; path = MagicRemoteHelper/MRStatusView.h; sourceTree = "<group>"; };
+		E1A785291896E9AD00F04168 /* MRStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRStatusView.m; path = MagicRemoteHelper/MRStatusView.m; sourceTree = "<group>"; };
 		E1A7852E1897041B00F04168 /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
 		E1A7852F1897041B00F04168 /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
 		E1D56AC718717AC300448F4B /* MagicRemoteHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicRemoteHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +141,8 @@
 		E1D56B2D18721AED00448F4B /* spotify-info.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "spotify-info.applescript"; sourceTree = "<group>"; };
 		E1D56B3118721BF900448F4B /* MRApplescriptHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRApplescriptHelper.h; sourceTree = "<group>"; };
 		E1D56B3218721BF900448F4B /* MRApplescriptHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRApplescriptHelper.m; sourceTree = "<group>"; };
+		E1E68D6618970E4D00245AC0 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		E1E68D6A1897126500245AC0 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D56ACB18717AC300448F4B /* Cocoa.framework in Frameworks */,
+				E1E68D6718970E4D00245AC0 /* Sparkle.framework in Frameworks */,
 				0ACFD2A9BEF8434B9A9DC105 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +233,7 @@
 		E1D56AC918717AC300448F4B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1E68D6618970E4D00245AC0 /* Sparkle.framework */,
 				E1D56ACA18717AC300448F4B /* Cocoa.framework */,
 				E1D56AE918717AC300448F4B /* XCTest.framework */,
 				E1D56ACC18717AC300448F4B /* Other Frameworks */,
@@ -237,17 +257,15 @@
 			children = (
 				E1D56ADC18717AC300448F4B /* AppDelegate.h */,
 				E1D56ADD18717AC300448F4B /* AppDelegate.m */,
-				E1A785221896E0A900F04168 /* MRMenu.h */,
-				E1A785231896E0A900F04168 /* MRMenu.m */,
-				E1A785281896E9AD00F04168 /* MRStatusView.h */,
-				E1A785291896E9AD00F04168 /* MRStatusView.m */,
 				E1D56AFE1871A6DD00448F4B /* MRServer.h */,
 				E1D56AFF1871A6DD00448F4B /* MRServer.m */,
+				E1E68D6518970B1B00245AC0 /* UI */,
 				E1D56B1E1871FA6A00448F4B /* Services */,
 				E1D56B3018721BE600448F4B /* Helpers */,
 				E1D56ADF18717AC300448F4B /* MainMenu.xib */,
 				E1D56AE218717AC300448F4B /* Images.xcassets */,
 				E1D56AD118717AC300448F4B /* Supporting Files */,
+				E1E68D6C1897126900245AC0 /* Resources */,
 			);
 			path = MagicRemoteHelper;
 			sourceTree = "<group>";
@@ -331,6 +349,26 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		E1E68D6518970B1B00245AC0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E1A785221896E0A900F04168 /* MRMenu.h */,
+				E1A785231896E0A900F04168 /* MRMenu.m */,
+				E1A785281896E9AD00F04168 /* MRStatusView.h */,
+				E1A785291896E9AD00F04168 /* MRStatusView.m */,
+			);
+			name = UI;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E1E68D6C1897126900245AC0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E1E68D6A1897126500245AC0 /* dsa_pub.pem */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -343,6 +381,7 @@
 				E1D56AC418717AC300448F4B /* Frameworks */,
 				E1D56AC518717AC300448F4B /* Resources */,
 				8D4A15B7B7AB43FA830EF274 /* Copy Pods Resources */,
+				E1E68D6818970E8F00245AC0 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -422,6 +461,7 @@
 				E1228EAD188DA4B6008ACDEC /* vlc-next.applescript in Resources */,
 				E1228EAC188DA4B5008ACDEC /* vlc-prev.applescript in Resources */,
 				E1228E9C188D8714008ACDEC /* keyboard-info.applescript in Resources */,
+				E1E68D6B1897126500245AC0 /* dsa_pub.pem in Resources */,
 				E1228E96188D83BC008ACDEC /* keyboard-next.applescript in Resources */,
 				E1228E97188D83BE008ACDEC /* keyboard-prev.applescript in Resources */,
 				E1228E98188D83C0008ACDEC /* keyboard-playpause.applescript in Resources */,
@@ -634,6 +674,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MagicRemoteHelper/MagicRemoteHelper-Prefix.pch";
 				INFOPLIST_FILE = "MagicRemoteHelper/MagicRemoteHelper-Info.plist";
@@ -648,6 +692,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MagicRemoteHelper/MagicRemoteHelper-Prefix.pch";
 				INFOPLIST_FILE = "MagicRemoteHelper/MagicRemoteHelper-Info.plist";

@@ -14,7 +14,7 @@
 #import "MRVLCService.h"
 #import "MRStatusView.h"
 #import "PFMoveApplication.h"
-
+#import <Sparkle/Sparkle.h>
 
 @implementation AppDelegate
 
@@ -45,13 +45,13 @@
             
         }];
     }];
-    //[[MRServer sharedServer] startServer];
-    
-    menu = [[MRMenu alloc] init];
-    
-    
+    [[MRServer sharedServer] startServer];
     
     [self setStatusItem];
+    
+    
+    [[SUUpdater sharedUpdater] checkForUpdates:nil];
+    
 }
 
 -(void)setStatusItem{
@@ -59,6 +59,8 @@
     if (!statusItem) statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
     
     statusItem.highlightMode = YES;
+    
+    menu = [[MRMenu alloc] init];
     
     statusItem.menu = menu;
     statusItem.action = @selector(menuWillOpen:);
