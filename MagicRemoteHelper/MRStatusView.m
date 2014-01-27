@@ -45,7 +45,7 @@
 
 - (void)drawRect:(NSRect)rect {
     
-    [[NSColor whiteColor] setFill];
+    [[NSColor cyanColor] setFill];
     NSRectFill(rect);
     [super drawRect:rect];
 }

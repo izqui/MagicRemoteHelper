@@ -32,6 +32,7 @@
 		E1A785211896E08400F04168 /* NSString+SymlinksAndAliases.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A785201896E08400F04168 /* NSString+SymlinksAndAliases.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E1A785241896E0A900F04168 /* MRMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A785231896E0A900F04168 /* MRMenu.m */; };
 		E1A7852A1896E9AD00F04168 /* MRStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A785291896E9AD00F04168 /* MRStatusView.m */; };
+		E1A785301897041B00F04168 /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A7852F1897041B00F04168 /* LaunchAtLoginController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E1D56ACB18717AC300448F4B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D56ACA18717AC300448F4B /* Cocoa.framework */; };
 		E1D56AD518717AC300448F4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1D56AD318717AC300448F4B /* InfoPlist.strings */; };
 		E1D56AD718717AC300448F4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D56AD618717AC300448F4B /* main.m */; };
@@ -91,6 +92,8 @@
 		E1A785231896E0A900F04168 /* MRMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRMenu.m; sourceTree = "<group>"; };
 		E1A785281896E9AD00F04168 /* MRStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRStatusView.h; sourceTree = "<group>"; };
 		E1A785291896E9AD00F04168 /* MRStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRStatusView.m; sourceTree = "<group>"; };
+		E1A7852E1897041B00F04168 /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
+		E1A7852F1897041B00F04168 /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
 		E1D56AC718717AC300448F4B /* MagicRemoteHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicRemoteHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D56ACA18717AC300448F4B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E1D56ACD18717AC300448F4B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -322,6 +325,8 @@
 				E1A7851C1896E03B00F04168 /* PFMoveApplication.m */,
 				E1A7851F1896E08400F04168 /* NSString+SymlinksAndAliases.h */,
 				E1A785201896E08400F04168 /* NSString+SymlinksAndAliases.m */,
+				E1A7852E1897041B00F04168 /* LaunchAtLoginController.h */,
+				E1A7852F1897041B00F04168 /* LaunchAtLoginController.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D56B3318721BF900448F4B /* MRApplescriptHelper.m in Sources */,
+				E1A785301897041B00F04168 /* LaunchAtLoginController.m in Sources */,
 				E1228EA5188DA437008ACDEC /* vlc-info.applescript in Sources */,
 				E1228E91188D8390008ACDEC /* keyboard-next.applescript in Sources */,
 				E1228EAB188DA45D008ACDEC /* vlc-prev.applescript in Sources */,

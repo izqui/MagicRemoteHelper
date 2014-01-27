@@ -13,11 +13,16 @@
 #import "MRKeyboardService.h"
 #import "MRVLCService.h"
 #import "MRStatusView.h"
+#import "PFMoveApplication.h"
+
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    
+    PFMoveToApplicationsFolderIfNecessary();
+    
     [[MRServicesManager sharedManager] addService:[[MRSpotifyService alloc] init]];
     [[MRServicesManager sharedManager] addService:[[MRVLCService alloc] init]];
     [[MRServicesManager sharedManager] addService:[[MRKeyboardService alloc] init]];
@@ -44,6 +49,8 @@
     
     menu = [[MRMenu alloc] init];
     
+    
+    
     [self setStatusItem];
 }
 
@@ -58,10 +65,6 @@
     
     MRStatusView *v = [[MRStatusView alloc] initWithFrame:CGRectMake(0, 0, 24, 20) menu:menu statusItem:statusItem];
     statusItem.view = v;
-    
-}
-
--(void)menuWillOpen:(NSMenu *)menu{
     
 }
 @end

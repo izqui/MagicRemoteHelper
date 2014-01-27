@@ -7,7 +7,7 @@
 //
 
 #import "MRMenu.h"
-
+#import "LaunchAtLoginController.h"
 
 @implementation MRMenu
 
@@ -32,7 +32,7 @@
     
     //Launch on startup
     NSMenuItem *su = [[NSMenuItem alloc] initWithTitle:@"Launch on startup" action:nil keyEquivalent:@""];
-    [su setState:([[NSUserDefaults standardUserDefaults] boolForKey:@"start"]) ? NSOnState : NSOffState];
+    [su setState:([[[LaunchAtLoginController alloc] init] launchAtLogin]) ? NSOnState : NSOffState];
     su.tag = 1;
     [self addItem:su];
     
@@ -61,8 +61,10 @@
 
 - (void)startup{
     
-    [[NSUserDefaults standardUserDefaults] setBool:![[NSUserDefaults standardUserDefaults] boolForKey:@"start"] forKey:@"start"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    /*[[NSUserDefaults standardUserDefaults] setBool:![[NSUserDefaults standardUserDefaults] boolForKey:@"start"] forKey:@"start"];
+    [[NSUserDefaults standardUserDefaults] synchronize];*/
+    LaunchAtLoginController *l = [[LaunchAtLoginController alloc] init];
+    [l setLaunchAtLogin:![l launchAtLogin]];
     [self setMenu];
 }
 - (void)quit{
