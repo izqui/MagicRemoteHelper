@@ -14,6 +14,10 @@
     
     return @"Spotify";
 }
+-(NSString *)appIdentifier{
+    
+    return @"com.spotify.client";
+}
 -(void)performAction:(NSString *)action callback:(void (^)())callback{
     
     NSString *name = [NSString stringWithFormat:@"spotify-%@", action];

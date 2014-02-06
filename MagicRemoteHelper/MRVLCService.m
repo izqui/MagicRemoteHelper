@@ -15,6 +15,11 @@
     
     return @"VLC";
 }
+-(NSString *)appIdentifier{
+    
+    return @"org.videolan.vlc";
+}
+
 -(void)performAction:(NSString *)action callback:(void (^)())callback{
     
     

@@ -15,6 +15,10 @@
     
     return @"Keyboard";
 }
+-(NSString *)appIdentifier{
+    
+    return @"com.apple.finder";
+}
 -(void)performAction:(NSString *)action callback:(void (^)())callback{
     
     

@@ -10,4 +10,5 @@
 
 @interface MRApplescriptHelper : NSObject
 + (NSString *)executeApplescriptWithName:(NSString *)name;
++ (BOOL)isAppInstalled:(NSString *)appId;
 @end

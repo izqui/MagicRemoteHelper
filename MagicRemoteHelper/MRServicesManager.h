@@ -10,6 +10,7 @@
 
 @protocol MRService <NSObject>
 -(NSString *)serviceName;
+-(NSString *)appIdentifier;
 //-(NSImage *)serviceImage;
 -(void)performAction:(NSString *)action callback:(void (^)())callback;
 -(void)requestInfoWithCallback:(void (^)(NSDictionary *info))callback;

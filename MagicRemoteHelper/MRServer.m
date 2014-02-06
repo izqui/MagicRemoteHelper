@@ -139,17 +139,8 @@
         
         BARResponse *res = [[BARResponse alloc] init];
         
-        NSMutableArray *retArr = [NSMutableArray array];
-        NSArray *ss = [[MRServicesManager sharedManager] getServices];
-        
-        for (int i = 0; i<ss.count; i++){
-            
-            NSObject<MRService> *s = ss[i];
-        
-            [retArr addObject:@{@"name":s.serviceName, @"id":[NSNumber numberWithInt:i], @"selected":[NSNumber numberWithBool:([[MRServicesManager sharedManager] selectedServiceIndex] == i)]}];
-        }
         res.statusCode = 200;
-        res.body = @{@"services":retArr};
+        res.body = @{@"services":[[MRServicesManager sharedManager] getServices]};
         [connection sendResponse:res];
         
         return YES;

@@ -7,6 +7,7 @@
 //
 
 #import "MRServicesManager.h"
+#import "MRApplescriptHelper.h"
 
 @implementation MRServicesManager
 + (id)sharedManager{
@@ -37,6 +38,8 @@
         
         _selectedServiceIndex = selectedServiceIndex;
         selectedService = services[selectedServiceIndex];
+        
+        NSLog(@"Selected: %@", [selectedService serviceName]);
     }
 }
 - (void)addService:(id<MRService>)service{
@@ -45,6 +48,7 @@
     [a addObject:service];
     
     services = a;
+
     
     if (!selectedService) {
         
@@ -55,8 +59,20 @@
 
 - (NSArray *)getServices{
     
-    //TODO: Return only installed services
-    return services;
+    NSMutableArray *retArr = [NSMutableArray array];
+    NSArray *ss = services;
+    
+    for (int i = 0; i<ss.count; i++){
+        
+        NSObject<MRService> *s = ss[i];
+        
+        if ([MRApplescriptHelper isAppInstalled:[s appIdentifier]]){
+            
+            [retArr addObject:@{@"name":s.serviceName, @"id":[NSNumber numberWithInt:i], @"selected":[NSNumber numberWithBool:([[MRServicesManager sharedManager] selectedServiceIndex] == i)]}];
+        }
+    }
+
+    return retArr;
 }
 
 //CONVENIENCE METHODS
