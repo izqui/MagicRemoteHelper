@@ -114,12 +114,12 @@
     }];
     [router addRoute:@"/image" forHTTPMethod:@"GET" handler:^BOOL(BARConnection *connection, BARRequest *request, NSDictionary *parameters) {
         
-        [[MRServicesManager sharedManager] getImageWithCallback:^(NSData *data) {
+        [[MRServicesManager sharedManager] getImageWithCallback:^(NSData *data, NSString *ext) {
             
             if (data){
                 BARResponse *res = [[BARResponse alloc] init];
                 res.statusCode = 200;
-                [res setHeaders:@{@"Content-type":@"image/png"}];
+                [res setHeaders:@{@"Content-type":[NSString stringWithFormat:@"image/%@", ext]}];
                 res.responseData = data;
                 [connection sendResponse:res];
             }

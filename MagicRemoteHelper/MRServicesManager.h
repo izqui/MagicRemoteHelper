@@ -15,7 +15,7 @@
 -(void)performAction:(NSString *)action callback:(void (^)())callback;
 -(void)requestInfoWithCallback:(void (^)(NSDictionary *info))callback;
 @optional
--(void)requestMediaCurrentImage:(void (^)(NSData *data))callback;
+-(void)requestMediaCurrentImage:(void (^)(NSData *data, NSString *ext))callback;
 @end
 
 
@@ -32,7 +32,7 @@
 
 -(void) makeAction:(NSString *)action callback:(void (^)())callback;
 -(void) infoRequestWithCallback:(void (^)(NSDictionary *dict))callback;
--(void) getImageWithCallback:(void (^)(NSData *data))callback;
+-(void) getImageWithCallback:(void (^)(NSData *data, NSString *ext))callback;
 
 @property (nonatomic) NSInteger selectedServiceIndex;
 @end

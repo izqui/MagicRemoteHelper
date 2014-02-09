@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0ACFD2A9BEF8434B9A9DC105 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E4A7F6FFD3498A87C7D674 /* libPods.a */; };
+		E11F824E18A4DAB500D2D36E /* MRiTunesService.m in Sources */ = {isa = PBXBuildFile; fileRef = E11F824D18A4DAB500D2D36E /* MRiTunesService.m */; };
+		E11F825A18A4DEB300D2D36E /* itunes-image.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E11F825018A4DB4100D2D36E /* itunes-image.applescript */; };
+		E11F825B18A4DEB300D2D36E /* itunes-info.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E11F825118A4DB4100D2D36E /* itunes-info.applescript */; };
+		E11F825C18A4DEB300D2D36E /* itunes-next.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E11F825218A4DB4100D2D36E /* itunes-next.applescript */; };
+		E11F825D18A4DEB300D2D36E /* itunes-playpause.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E11F825318A4DB4100D2D36E /* itunes-playpause.applescript */; };
+		E11F825E18A4DEB300D2D36E /* itunes-prev.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E11F825418A4DB4100D2D36E /* itunes-prev.applescript */; };
 		E1228E86188C4B88008ACDEC /* spotify-image.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E1228E85188C4B88008ACDEC /* spotify-image.applescript */; };
 		E1228E87188C4B9B008ACDEC /* spotify-image.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228E85188C4B88008ACDEC /* spotify-image.applescript */; };
 		E1228E8E188D81A9008ACDEC /* MRKeyboardService.m in Sources */ = {isa = PBXBuildFile; fileRef = E1228E8D188D81A9008ACDEC /* MRKeyboardService.m */; };
@@ -87,6 +93,13 @@
 /* Begin PBXFileReference section */
 		14500D84B910452080153E9F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		B5E4A7F6FFD3498A87C7D674 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E11F824C18A4DAB500D2D36E /* MRiTunesService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRiTunesService.h; sourceTree = "<group>"; };
+		E11F824D18A4DAB500D2D36E /* MRiTunesService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRiTunesService.m; sourceTree = "<group>"; };
+		E11F825018A4DB4100D2D36E /* itunes-image.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "itunes-image.applescript"; sourceTree = "<group>"; };
+		E11F825118A4DB4100D2D36E /* itunes-info.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "itunes-info.applescript"; sourceTree = "<group>"; };
+		E11F825218A4DB4100D2D36E /* itunes-next.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "itunes-next.applescript"; sourceTree = "<group>"; };
+		E11F825318A4DB4100D2D36E /* itunes-playpause.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "itunes-playpause.applescript"; sourceTree = "<group>"; };
+		E11F825418A4DB4100D2D36E /* itunes-prev.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "itunes-prev.applescript"; sourceTree = "<group>"; };
 		E1228E85188C4B88008ACDEC /* spotify-image.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "spotify-image.applescript"; sourceTree = "<group>"; };
 		E1228E8C188D81A9008ACDEC /* MRKeyboardService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRKeyboardService.h; sourceTree = "<group>"; };
 		E1228E8D188D81A9008ACDEC /* MRKeyboardService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRKeyboardService.m; sourceTree = "<group>"; };
@@ -168,6 +181,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E11F824B18A4DA7500D2D36E /* iTunes */ = {
+			isa = PBXGroup;
+			children = (
+				E11F824C18A4DAB500D2D36E /* MRiTunesService.h */,
+				E11F824D18A4DAB500D2D36E /* MRiTunesService.m */,
+				E11F824F18A4DAB900D2D36E /* scripts */,
+			);
+			name = iTunes;
+			sourceTree = "<group>";
+		};
+		E11F824F18A4DAB900D2D36E /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				E11F825018A4DB4100D2D36E /* itunes-image.applescript */,
+				E11F825118A4DB4100D2D36E /* itunes-info.applescript */,
+				E11F825218A4DB4100D2D36E /* itunes-next.applescript */,
+				E11F825318A4DB4100D2D36E /* itunes-playpause.applescript */,
+				E11F825418A4DB4100D2D36E /* itunes-prev.applescript */,
+			);
+			name = scripts;
+			sourceTree = "<group>";
+		};
 		E1228E8B188D819B008ACDEC /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +342,7 @@
 				E1D56B141871F55600448F4B /* MRServicesManager.m */,
 				E1D56B1F1871FA7300448F4B /* Spotify */,
 				E1228E8B188D819B008ACDEC /* Keyboard */,
+				E11F824B18A4DA7500D2D36E /* iTunes */,
 				E1228E9D188DA1E2008ACDEC /* VLC */,
 			);
 			name = Services;
@@ -448,6 +484,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E11F825A18A4DEB300D2D36E /* itunes-image.applescript in Resources */,
+				E11F825B18A4DEB300D2D36E /* itunes-info.applescript in Resources */,
+				E11F825C18A4DEB300D2D36E /* itunes-next.applescript in Resources */,
+				E11F825D18A4DEB300D2D36E /* itunes-playpause.applescript in Resources */,
+				E11F825E18A4DEB300D2D36E /* itunes-prev.applescript in Resources */,
 				E1D56B2F18721AF700448F4B /* spotify-info.applescript in Resources */,
 				E1D56B291872016100448F4B /* spotify-playpause.applescript in Resources */,
 				E1D56B2A1872016100448F4B /* spotify-next.applescript in Resources */,
@@ -540,6 +581,7 @@
 				E1228E93188D839D008ACDEC /* keyboard-prev.applescript in Sources */,
 				E1D56B181871F8CD00448F4B /* MRSpotifyService.m in Sources */,
 				E1D56B2E18721AED00448F4B /* spotify-info.applescript in Sources */,
+				E11F824E18A4DAB500D2D36E /* MRiTunesService.m in Sources */,
 				E1228EA7188DA442008ACDEC /* vlc-playpause.applescript in Sources */,
 				E1D56B251872009900448F4B /* spotify-next.applescript in Sources */,
 				E1D56B27187200B600448F4B /* spotify-prev.applescript in Sources */,

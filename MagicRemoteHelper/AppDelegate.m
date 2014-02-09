@@ -8,13 +8,16 @@
 
 #import "AppDelegate.h"
 #import "MRServer.h"
+
 #import "MRServicesManager.h"
 #import "MRSpotifyService.h"
 #import "MRKeyboardService.h"
+#import "MRiTunesService.h"
+
 #import "MRVLCService.h"
 #import "MRStatusView.h"
 #import "PFMoveApplication.h"
-#import <Sparkle/Sparkle.h>
+
 
 @implementation AppDelegate
 
@@ -26,9 +29,7 @@
     [[MRServicesManager sharedManager] addService:[[MRSpotifyService alloc] init]];
     [[MRServicesManager sharedManager] addService:[[MRVLCService alloc] init]];
     [[MRServicesManager sharedManager] addService:[[MRKeyboardService alloc] init]];
-    
-    
-    [[MRServicesManager sharedManager] setSelectedServiceIndex:0];
+    [[MRServicesManager sharedManager] addService:[[MRiTunesService alloc] init]];
     
     
     [[MRServer sharedServer] setAcceptedActions:@[@"playpause",@"next", @"prev"]];
@@ -48,9 +49,6 @@
     [[MRServer sharedServer] startServer];
     
     [self setStatusItem];
-    
-    
-    [[SUUpdater sharedUpdater] checkForUpdates:nil];
     
 }
 

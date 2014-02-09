@@ -14,7 +14,6 @@
     
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *str = [bundle pathForResource:name ofType:@"applescript"];
-    NSLog(@"path %@", str);
     NSURL *url = [[NSURL alloc] initFileURLWithPath:str];
     NSAppleScript *script = [[NSAppleScript alloc] initWithContentsOfURL:url error:nil];
     NSAppleEventDescriptor *event = [script executeAndReturnError:nil];

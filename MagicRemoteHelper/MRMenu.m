@@ -8,6 +8,7 @@
 
 #import "MRMenu.h"
 #import "LaunchAtLoginController.h"
+#import <Sparkle/Sparkle.h>
 
 @implementation MRMenu
 
@@ -36,14 +37,21 @@
     su.tag = 1;
     [self addItem:su];
     
+    //Hola quiero updatear
+    
+    
+    NSMenuItem *uu = [[NSMenuItem alloc] initWithTitle:@"Check update..." action:nil keyEquivalent:@""];
+    uu.tag = 3;
+    [self addItem:uu];
+
     //Quit
     
     NSMenuItem *qu = [[NSMenuItem alloc] initWithTitle:@"Quit" action:nil keyEquivalent:@""];
     qu.tag = 2;
     [self addItem:qu];
     
-    su.target = qu.target = self;
-    su.action = qu.action = @selector(menuClick:);
+    uu.target = su.target = qu.target = self;
+    uu.action = su.action = qu.action = @selector(menuClick:);
 }
 
 - (void)menuClick:(NSMenuItem *)sender{
@@ -54,6 +62,8 @@
             break;
         case 2:
             [self quit];
+        case 3:
+            [[SUUpdater sharedUpdater] checkForUpdates:nil];
         default:
             break;
     }

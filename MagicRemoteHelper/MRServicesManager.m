@@ -68,7 +68,7 @@
         
         if ([MRApplescriptHelper isAppInstalled:[s appIdentifier]]){
             
-            [retArr addObject:@{@"name":s.serviceName, @"id":[NSNumber numberWithInt:i], @"selected":[NSNumber numberWithBool:([[MRServicesManager sharedManager] selectedServiceIndex] == i)]}];
+            [retArr addObject:@{@"name":s.serviceName, @"id":[NSNumber numberWithInt:i], @"selected":[NSNumber numberWithBool:([[MRServicesManager sharedManager] selectedServiceIndex] == i)], @"hasArtwork":[NSNumber numberWithBool:[s respondsToSelector:@selector(requestMediaCurrentImage:)]]}];
         }
     }
 
@@ -98,7 +98,7 @@
         NSLog(@"No services bro");
     }
 }
--(void) getImageWithCallback:(void (^)(NSData *data))callback{
+-(void) getImageWithCallback:(void (^)(NSData *data, NSString *ext))callback{
     
     if (selectedService && [selectedService respondsToSelector:@selector(requestMediaCurrentImage:)]){
         
@@ -106,7 +106,7 @@
     }
     else {
         
-        callback(nil);
+        callback(nil, nil);
     }
 }
 @end

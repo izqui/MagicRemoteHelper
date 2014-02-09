@@ -1,32 +1,33 @@
 //
-//  MRSpotifyService.m
+//  MRiTunesService.m
 //  MagicRemoteHelper
 //
-//  Created by Jorge Izquierdo on 30/12/13.
-//  Copyright (c) 2013 Jorge Izquierdo. All rights reserved.
+//  Created by Jorge Izquierdo on 07/02/14.
+//  Copyright (c) 2014 Jorge Izquierdo. All rights reserved.
 //
 
-#import "MRSpotifyService.h"
+#import "MRiTunesService.h"
 #import "MRApplescriptHelper.h"
 
-@implementation MRSpotifyService
+@implementation MRiTunesService
+
 -(NSString *)serviceName{
     
-    return @"Spotify";
+    return @"iTunes";
 }
 -(NSString *)appIdentifier{
     
-    return @"com.spotify.client";
+    return @"com.apple.itunes";
 }
 -(void)performAction:(NSString *)action callback:(void (^)())callback{
     
-    NSString *name = [NSString stringWithFormat:@"spotify-%@", action];
+    NSString *name = [NSString stringWithFormat:@"itunes-%@", action];
     [MRApplescriptHelper executeApplescriptWithName:name];
     if (callback) callback();
 }
 -(void)requestInfoWithCallback:(void (^)(NSDictionary *))callback{
     
-    NSString *res = [MRApplescriptHelper executeApplescriptWithName:@"spotify-info"];
+    NSString *res = [MRApplescriptHelper executeApplescriptWithName:@"itunes-info"];
     if (res){
         
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[res dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
@@ -35,7 +36,7 @@
 }
 -(void)requestMediaCurrentImage:(void (^)(NSData *data, NSString *ext))callback{
     
-    NSString *res = [MRApplescriptHelper executeApplescriptWithName:@"spotify-image"];
+    NSString *res = [MRApplescriptHelper executeApplescriptWithName:@"itunes-image"];
     if (res){
         
         NSData *d = [[NSFileManager defaultManager] contentsAtPath:res];
@@ -44,4 +45,5 @@
         
     }
 }
+
 @end
