@@ -35,7 +35,7 @@
         
         callback(@{@"title":res});
     }*/
-    callback(@{@"title":@"Keyboard"});
+    callback(@{@"title":@"Keyboard", @"state":@"playing"});
 }
 
 @end

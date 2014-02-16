@@ -34,6 +34,7 @@
 		E1228EAD188DA4B6008ACDEC /* vlc-next.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228EA8188DA44F008ACDEC /* vlc-next.applescript */; };
 		E1228EAE188DA4B7008ACDEC /* vlc-playpause.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228EA6188DA442008ACDEC /* vlc-playpause.applescript */; };
 		E1228EAF188DA4B9008ACDEC /* vlc-info.applescript in Resources */ = {isa = PBXBuildFile; fileRef = E1228EA4188DA437008ACDEC /* vlc-info.applescript */; };
+		E189889B18B037A700C8105A /* MagicRemote.icns in Resources */ = {isa = PBXBuildFile; fileRef = E189889A18B037A700C8105A /* MagicRemote.icns */; };
 		E1A7851D1896E03B00F04168 /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A7851C1896E03B00F04168 /* PFMoveApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E1A785211896E08400F04168 /* NSString+SymlinksAndAliases.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A785201896E08400F04168 /* NSString+SymlinksAndAliases.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E1A785241896E0A900F04168 /* MRMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A785231896E0A900F04168 /* MRMenu.m */; };
@@ -113,6 +114,7 @@
 		E1228EA6188DA442008ACDEC /* vlc-playpause.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "vlc-playpause.applescript"; sourceTree = "<group>"; };
 		E1228EA8188DA44F008ACDEC /* vlc-next.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "vlc-next.applescript"; sourceTree = "<group>"; };
 		E1228EAA188DA45D008ACDEC /* vlc-prev.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = "vlc-prev.applescript"; sourceTree = "<group>"; };
+		E189889A18B037A700C8105A /* MagicRemote.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MagicRemote.icns; sourceTree = "<group>"; };
 		E1A7851B1896E03B00F04168 /* PFMoveApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFMoveApplication.h; sourceTree = "<group>"; };
 		E1A7851C1896E03B00F04168 /* PFMoveApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFMoveApplication.m; sourceTree = "<group>"; };
 		E1A7851F1896E08400F04168 /* NSString+SymlinksAndAliases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SymlinksAndAliases.h"; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 		E1D56ABE18717AC300448F4B = {
 			isa = PBXGroup;
 			children = (
+				E189889A18B037A700C8105A /* MagicRemote.icns */,
 				E1D56AD018717AC300448F4B /* MagicRemoteHelper */,
 				E1D56AEE18717AC300448F4B /* MagicRemoteHelperTests */,
 				E1D56AC918717AC300448F4B /* Frameworks */,
@@ -500,6 +503,7 @@
 				E1228EAE188DA4B7008ACDEC /* vlc-playpause.applescript in Resources */,
 				E1D56ADB18717AC300448F4B /* Credits.rtf in Resources */,
 				E1228EAD188DA4B6008ACDEC /* vlc-next.applescript in Resources */,
+				E189889B18B037A700C8105A /* MagicRemote.icns in Resources */,
 				E1228EAC188DA4B5008ACDEC /* vlc-prev.applescript in Resources */,
 				E1228E9C188D8714008ACDEC /* keyboard-info.applescript in Resources */,
 				E1E68D6B1897126500245AC0 /* dsa_pub.pem in Resources */,
@@ -714,7 +718,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14500D84B910452080153E9F /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -732,7 +735,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14500D84B910452080153E9F /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
