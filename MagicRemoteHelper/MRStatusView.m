@@ -18,6 +18,8 @@
         [self registerForDraggedTypes:[NSArray arrayWithObjects: NSFilenamesPboardType, nil]];
         menu = m;
         statusItem = s;
+        
+
     }
     
     return self;
@@ -45,8 +47,11 @@
 
 - (void)drawRect:(NSRect)rect {
     
-    [[NSColor cyanColor] setFill];
-    NSRectFill(rect);
+    NSRect bounds = [self bounds];
+    [statusItem drawStatusBarBackgroundInRect:bounds withHighlight:highlight];
+    [[NSImage imageNamed:@"statusicon"] drawInRect:CGRectMake(5, 1, 20, 20) fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
+    
+    
     [super drawRect:rect];
 }
 
