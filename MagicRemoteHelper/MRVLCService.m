@@ -39,6 +39,8 @@
         if (n > 0) dict[@"state"] = @"playing";
         else  dict[@"state"] = @"paused";
         
+        dict[@"service"] = [[self serviceName] lowercaseString];
+        
         NSLog(@"dict %@", dict);
         if (dict && callback) callback(dict);
     }

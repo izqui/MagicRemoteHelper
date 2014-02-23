@@ -35,7 +35,7 @@
         
         callback(@{@"title":res});
     }*/
-    callback(@{@"title":@"Keyboard", @"state":@"playing"});
+    callback(@{@"title":@"Keyboard", @"state":@"playing", @"service":[self serviceName]});
 }
 
 @end

@@ -10,6 +10,7 @@
 #import "MRApplescriptHelper.h"
 
 @implementation MRSpotifyService
+
 -(NSString *)serviceName{
     
     return @"Spotify";
@@ -29,7 +30,8 @@
     NSString *res = [MRApplescriptHelper executeApplescriptWithName:@"spotify-info"];
     if (res){
         
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[res dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
+        NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:[NSJSONSerialization JSONObjectWithData:[res dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil]];
+        dict[@"service"] = [[self serviceName] lowercaseString];
         if (dict && callback) callback(dict);
     }
 }
