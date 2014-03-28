@@ -10,6 +10,7 @@
 #import "MRApplescriptHelper.h"
 
 @implementation MRServicesManager
+
 + (id)sharedManager{
     
     static MRServicesManager *s = nil;
@@ -109,4 +110,28 @@
         callback(nil, nil);
     }
 }
+
+
+-(NSInteger) getCurrentVolume{
+    
+    NSString *result = [MRApplescriptHelper executeApplescriptWithName:@"volume-info"];
+    
+    return [result integerValue];
+}
+
+-(NSInteger) turnVolume:(NSString *)level{
+    
+    if ([level isEqualToString:@"up"] || [level isEqualToString:@"down"]){
+        
+        [MRApplescriptHelper executeApplescriptWithName:[NSString stringWithFormat:@"volume-%@", level]];
+    }
+    
+    else if (level){
+        
+        [MRApplescriptHelper setVolumeLevel:[level integerValue]];
+    }
+         
+    return [self getCurrentVolume];
+}
+
 @end

@@ -29,4 +29,14 @@
     
     return ([event.stringValue isEqualToString:@"1"]);
 }
+
++ (void)setVolumeLevel:(NSInteger)level{
+    
+    NSString *string = [NSString stringWithFormat:@"set volume output volume %li", (long)level];
+    NSAppleScript *script = [[NSAppleScript alloc] initWithSource:string];
+    [script executeAndReturnError:nil];
+
+}
+
+
 @end

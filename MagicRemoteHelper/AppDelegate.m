@@ -31,7 +31,6 @@
     [[MRServicesManager sharedManager] addService:[[MRKeyboardService alloc] init]];
     [[MRServicesManager sharedManager] addService:[[MRiTunesService alloc] init]];
     
-    
     [[MRServer sharedServer] setAcceptedActions:@[@"playpause",@"next", @"prev"]];
     [[MRServer sharedServer] setConnectionBlock:^(NSString *host){
     

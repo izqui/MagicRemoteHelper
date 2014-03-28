@@ -160,6 +160,29 @@
         [connection sendResponse:response];
         return YES;
     }];
+    
+    [router addRoute:@"/volume" forHTTPMethod:@"GET" handler:^BOOL(BARConnection *connection, BARRequest *request, NSDictionary *parameters) {
+        
+        BARResponse *response = [[BARResponse alloc] init];
+        response.statusCode = 200;
+        response.body = @{@"volume": @([[MRServicesManager sharedManager] getCurrentVolume])};
+        
+        
+        [connection sendResponse:response];
+        return YES;
+    }];
+    
+    [router addRoute:@"/volume/:volume" forHTTPMethod:@"GET" handler:^BOOL(BARConnection *connection, BARRequest *request, NSDictionary *parameters) {
+        
+        NSString *volume = parameters[@"volume"];
+        
+        BARResponse *response = [[BARResponse alloc] init];
+        response.statusCode = 200;
+        response.body = @{@"volume": @([[MRServicesManager sharedManager] turnVolume:volume])};
+        
+        [connection sendResponse:response];
+        return YES;
+    }];
 
     
     return srv;

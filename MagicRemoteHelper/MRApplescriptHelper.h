@@ -11,4 +11,5 @@
 @interface MRApplescriptHelper : NSObject
 + (NSString *)executeApplescriptWithName:(NSString *)name;
 + (BOOL)isAppInstalled:(NSString *)appId;
++ (void)setVolumeLevel:(NSInteger)level;
 @end

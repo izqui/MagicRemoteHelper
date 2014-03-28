@@ -36,6 +36,9 @@
 -(void) infoRequestWithCallback:(void (^)(NSDictionary *dict))callback;
 -(void) getImageWithCallback:(void (^)(NSData *data, NSString *ext))callback;
 
+-(NSInteger) getCurrentVolume;
+-(NSInteger) turnVolume:(NSString *)level;
+
 @property (nonatomic) NSInteger selectedServiceIndex;
 @end
 
