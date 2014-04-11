@@ -23,8 +23,9 @@
 }
 - (void)setMenu{
     
-    [self removeAllItems];
     
+    [self removeAllItems];
+    //self.delegate = self;
     //Current IP
     NSMenuItem *ip = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Host: %@", [[NSHost currentHost] addresses][1]] action:nil keyEquivalent:@""];
     [ip setEnabled:NO];
@@ -54,6 +55,10 @@
     uu.action = su.action = qu.action = @selector(menuClick:);
 }
 
+- (void)menuWillOpen:(NSMenu *)menu{
+    
+    [self setMenu];
+}
 - (void)menuClick:(NSMenuItem *)sender{
     
     switch (sender.tag) {
@@ -68,7 +73,6 @@
             break;
     }
 }
-
 - (void)startup{
     
     /*[[NSUserDefaults standardUserDefaults] setBool:![[NSUserDefaults standardUserDefaults] boolForKey:@"start"] forKey:@"start"];

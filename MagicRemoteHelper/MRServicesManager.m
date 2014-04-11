@@ -92,7 +92,14 @@
     
     if (selectedService && [selectedService respondsToSelector:@selector(requestInfoWithCallback:)]){
         
-        [selectedService requestInfoWithCallback:callback];
+        [selectedService requestInfoWithCallback:^(NSDictionary *info) {
+            if (info){
+                
+                NSMutableDictionary *d = [NSMutableDictionary dictionaryWithDictionary:info];
+                d[@"volume"] = @([self getCurrentVolume]);
+                if (callback) callback(d);
+            }
+        }];
     }
     else {
         

@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface MRMenu : NSMenu
-
+@interface MRMenu : NSMenu <NSMenuDelegate>
+- (void)setMenu;
 @end
